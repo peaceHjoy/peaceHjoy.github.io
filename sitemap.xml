@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.baidu.com/vote/index.html</loc>
+    <loc>https://www.baidu.com/videos/index.html</loc>
     
     <lastmod>2026-04-03</lastmod>
     
@@ -20,16 +20,7 @@
   </url>
   
   <url>
-    <loc>https://www.baidu.com/videos/index.html</loc>
-    
-    <lastmod>2026-04-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.baidu.com/musics/index.html</loc>
+    <loc>https://www.baidu.com/vote/index.html</loc>
     
     <lastmod>2026-04-03</lastmod>
     
@@ -39,6 +30,15 @@
   
   <url>
     <loc>https://www.baidu.com/lab/index.html</loc>
+    
+    <lastmod>2026-04-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.baidu.com/musics/index.html</loc>
     
     <lastmod>2026-04-03</lastmod>
     
@@ -65,15 +65,6 @@
   </url>
   
   <url>
-    <loc>https://www.baidu.com/tags/index.html</loc>
-    
-    <lastmod>2026-04-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.baidu.com/record/index.html</loc>
     
     <lastmod>2026-04-03</lastmod>
@@ -83,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://www.baidu.com/gallery/itsNeko%E5%8D%9A%E4%B8%BB%E7%9A%84%E7%BB%98%E7%94%BB%E4%BD%9C%E5%93%81/index.html</loc>
+    <loc>https://www.baidu.com/tags/index.html</loc>
     
     <lastmod>2026-04-03</lastmod>
     
@@ -92,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://www.baidu.com/essay/index.html</loc>
+    <loc>https://www.baidu.com/gallery/ItsSimple%E5%8D%9A%E4%B8%BB%E7%9A%84%E7%BB%98%E7%94%BB%E4%BD%9C%E5%93%81/index.html</loc>
     
     <lastmod>2026-04-03</lastmod>
     
@@ -111,6 +102,15 @@
   
   <url>
     <loc>https://www.baidu.com/gallery/index.html</loc>
+    
+    <lastmod>2026-04-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.baidu.com/essay/index.html</loc>
     
     <lastmod>2026-04-03</lastmod>
     
@@ -155,7 +155,7 @@
   </url>
   
   <url>
-    <loc>https://www.baidu.com/donate/index.html</loc>
+    <loc>https://www.baidu.com/count/index.html</loc>
     
     <lastmod>2026-04-03</lastmod>
     
@@ -164,7 +164,7 @@
   </url>
   
   <url>
-    <loc>https://www.baidu.com/count/index.html</loc>
+    <loc>https://www.baidu.com/donate/index.html</loc>
     
     <lastmod>2026-04-03</lastmod>
     
