@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类, 这里是网站关键词">
+    <meta name="keywords" content="itsNeko博主的绘画作品, 这里是网站关键词">
     <meta name="description" content="这里是网站描述">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分类 | 论圃杂言</title>
+    <title>itsNeko博主的绘画作品 | 论圃杂言</title>
     
     <script>
         // 隐藏
@@ -891,14 +891,31 @@ class="themespring" -->
 </div>
 <!-- 春节主题模式样式结束 -->
 
-    <div class="bg-cover pd-header about-cover">
+    <!-- 加密功能 -->
+
+    <script src="/libs/cryptojs/crypto-js.min.js"></script>
+    <script>
+        (function() {
+            let pwd = '';
+
+            if (pwd && pwd.length > 0) {
+                if (pwd !== CryptoJS.SHA256(prompt('请输入密码才可访问哒~')).toString(CryptoJS.enc.Hex)) {
+                    alert('密码错误哦，将返回相册页面哦~');
+                    location.href = '/gallery';
+                }
+            }
+        })();
+    </script>
+
+
+<!-- <div class="bg-cover pd-header about-cover">
     <div class="container">
         <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <div class="title center-align">
                 
-                    categories
+                    itsNeko博主的绘画作品
                  
             </div>
 
@@ -934,298 +951,234 @@ class="themespring" -->
     <div class="mohuxiaoguo"></div>
 </div>
 
+ -->
 
-<style>
+<link rel="stylesheet" href="/libs/MyGallery/css/baguetteBox.css">
+<!-- 该主题自带的lightGallery.js在图片多的时候会很卡，所以弃用，使用了一个我在网上找的baguetteBox，很轻量级，就是功能少了点 -->
+<script src="/libs/MyGallery/js/baguetteBox.js"></script> 
+<style>    
     #sma {
-        bottom: 166px;
+        bottom: 150px;
     }
-    #switchspring {
-        bottom: 230px;
+    .my-gallery .photo img {
+        transition: all 0.6s ease-in-out; 
+    }     
+    .my-gallery .photo:hover img {
+        opacity: 0.6;
+        transform: scale(1.05);
+    }      
+    .my-gallery {
+        margin: 20px auto;
+    }   
+    .miaoshus .title {
+        font-family: MV Boli;
     }
-    @media only screen and (max-width: 601px) {
-        #switchspring {
-            bottom: 178px!important;
+    .miaoshus {
+        padding: 20px;
+        border: 1px dashed #e6e6e6;
+        color: #969696;
+        position: relative;
+        display: inline-block;
+        width: 75%;
+        background: #fbfbfb50;
+        border-radius: 10px;
+        font-size: 16px;
+        margin: 24px auto 12px;
+        
+    }
+    body.dark .miaoshus {
+        background: 0 0;
+        border: 1px dashed #888;
+    }
+    body {
+        overflow: visible!important;
+    }
+    .box {
+            position: relative;
+            max-width: 1064px;
+        }
+    .box img {
+        width: 350px;
+        height: 350px;
+        vertical-align: top;
+        padding: 8px;
+        border-radius: 20px;
+        transition: all 0.5s;
+    }
+    .box img:hover {
+        transform: scale(1.05);
+    }
+    .page-footer {
+        display: none
+    }
+    body {
+        overflow-y: visible!important;
+    }
+    header {
+        background-color: #000;
+    }
+    .biaotiss {
+            font-family: MV Boli;
+        }   
+    canvas {
+        opacity: 0.3!important;
+    }
+    @media only screen and (max-width: 1058px) {
+        .box {
+            margin-left: 145px;
         }
     }
-    .bg-cover::before {
-        background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/grid.png);
+    @media only screen and (max-width: 770px) {
+        .box {
+            margin-left: 15px;
+        }
+    }
+    @media only screen and (max-width: 500px) {
+        #previous-button, #next-button {
+            display: none;
+        }
+    }
+    @media only screen and (max-width: 380px) {
+        .box {
+            margin-left: -5px;
+        }
+    }
+    @media only screen and (max-width: 323px) {
+        .box img {
+            width: 296px;
+            left: 0;
+        }
     }
 </style>
-<main class="content">
-    
 
-<style>
-/* 文章分类书本样式 */
-.chip-container .tag-chips {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.chip-container .tag-chips a {
-    margin: 0 7px 10px;
-}
-.chip-container .chip {
-    max-width: calc(100% / 4);
-    min-width: 10em;
-    height: 200px;
-    position: relative;
-    transition: .5s linear;
-    padding: 19px 0;
-    line-height: 20px;
-    z-index: 990;
-    border-radius: 5px 15px 15px 5px;
-    transform-origin: left center 0;
-}
-.chip-container .notebook-cover::before {
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: calc(100% + 2px);
-    top: -1px;
-    z-index: 100;
-    border-radius: 2px;
-    right: 25px;
-    transition: 2s ease;
-    /* background: linear-gradient(to right,#9c2e2b 0,#cc4b48 12%,#9c2e2b 25%,#cc4b48 37%,#9c2e2b 50%,#cc4b48 62%,#9c2e2b 75%,#cc4b48 87%,#9c2e2b 100%); */
-    background: linear-gradient(to right,#1e606e 0,#2e95aa 12%,#1e606e 25%,#2e95aa 37%,#1e606e 50%,#2e95aa 62%,#1e606e 75%,#2e95aa 87%,#1e606e 100%);
-}
-
-.chip .notebook-skin {
-    height: 50px;
-    width: 100%;
-    background: #e8e8e0;
-    margin-top: 42px;
-    padding: 10px 32px 64px 10px;
-    font-size: 19px;
-    position: relative;
-    z-index: 10;
-    color: #222;
-    text-align: left;
-    box-shadow: 0 1px 1px rgba(0,0,0,.2);
-}
-.chip .notebook-skin:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 15px;
-    left: 0;
-    bottom: 0;
-    background: #cddc39;
-}
-.notebook-cover {
-    background: #cc4b48;
-    height: 200px;
-    width: 140px;
-    position: absolute;
-    border-radius: 5px 15px 15px 5px;
-    z-index: 10;
-    transition: .5s linear;
-    transform-style: preserve-3d;
-    transform-origin: left center 0;
-}
-
-.moleskine-wrapper {
-    max-width: calc(100% / 4);
-    min-width: 10em;
-}
-.moleskine-notebook:hover .notebook-cover {
-    transform: rotateY(-50deg);
-    z-index: 99;
-    box-shadow: 20px 10px 50px rgba(0,0,0,.2);
-}
-.moleskine-notebook {
-    height: 200px;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    transition: .5s linear;
-    border-radius: 5px 15px 15px 5px;
-    transform-origin: left center 0;
-}
-.moleskine-notebook:hover {
-    transform: rotateZ(-10deg);
-}
-.notebook-page.dotted {
-    background: linear-gradient(to bottom,#fbfae8 9px,#e4e4e4 1px);
-    background-size: 100% 10px;
-}
-.chip-container .chip:hover {
-    background: none;
-}
-.notebook-page {
-    height: 100%;
-    width: 140px;
-    position: absolute;
-    top: 10px;
-    background-color: #fbfae8;
-    z-index: 0;
-    border-radius: 5px 16px 16px 5px;
-    overflow: hidden;
-}
-</style>
-
-<div id="category-cloud" class="container chip-container">
-    <div class="card">
-        <!-- 福袋按钮 -->
+<div class="tag-title center-align">
+        <div class="miaoshus">
+            <!-- 福袋按钮 -->
         <div class="caishendeng">        
             <div class="guguxian">
                 <img class="caishenpic gugus" src="/medias/spring-img/jiaozi.png" />
             </div>              
         </div>
-        
-        <div class="card-content">
-            <!-- <div class="tag-title center-align">
-                <div class="suibianss"><i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类</div>
-                <div class="notice">
-                    <div class="notice-content" id="poem"></div>
-                    <div class="notice-content" id="info"></div>
-                </div>
-                <script>
-                    $.get("https://v1.hitokoto.cn?c=d&c=h",function(data,status){if(status=='success'){$('#poem').html(data.hitokoto);if(data.from_who!=null){$('#info').html(data.from_who+" · "+"《 "+data.from+" 》");}else{$('#info').html(" “ "+data.from+" ” ");}}else{$('#poem').html("获取出错啦");}});
-                </script>
-            </div> -->
-            <div class="tag-chips">
+        <div class="title center-align">
+            “ 
+                itsNeko博主的绘画作品
+              ”
+        </div>
+        “ 光影浮生 ”
+        “ 此间有岁月温柔，还有晚风披晚霞而行。”
+    </div>
+</div>
+
+<!-- 相册 -->
+<section class="gallery">
+    <div id="myGallery" class="my-gallery">
+        <div class="row">
+            <div class="box">
+            
                 
                 
+                                       
+                        <a href="images/1.jpg" data-caption="itsNeko博主的绘画作品">
+                            <img class="mat" src="/medias/loading.svg" data-src="images/1.jpg" alt="img"+0 >
+                        </a>                   
                 
-                <a href="/categories/%E6%8A%80%E6%9C%AF/" class="wenzhs" title="技术 : 1">
-                    
-                    <div class="moleskine-wrapper">
-                        <div class="moleskine-notebook">
-                            <div class="chip notebook-cover center-align waves-effect waves-light
-                             chip-default "
-                                    style="background-color: #cc4b48;">                                               
-                                <div class="notebook-skin
-                                     chip-default "
-                                    >技术                                  
-                                    <!-- 福袋按钮 -->
-                                    <div class="caishendeng">        
-                                        <div class="fenleiss">
-                                            <img class="caishenpic lions" src="/medias/spring-img/lion.png" />
-                                        </div>              
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="notebook-page dotted"></div>
-                        </div>
-                    </div>
-                </a>
+                                       
+                        <a href="images/2.jpg" data-caption="itsNeko博主的绘画作品">
+                            <img class="mat" src="/medias/loading.svg" data-src="images/2.jpg" alt="img"+1 >
+                        </a>                   
                 
+                                       
+                        <a href="images/3.jpg" data-caption="itsNeko博主的绘画作品">
+                            <img class="mat" src="/medias/loading.svg" data-src="images/3.jpg" alt="img"+2 >
+                        </a>                   
                 
-                <a href="/categories/itsNeko%E5%8D%9A%E5%AE%A2%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/" class="wenzhs" title="itsNeko博客食用方法 : 1">
-                    
-                    <div class="moleskine-wrapper">
-                        <div class="moleskine-notebook">
-                            <div class="chip notebook-cover center-align waves-effect waves-light
-                             chip-default "
-                                    style="background-color: #2e95aa;">                                               
-                                <div class="notebook-skin
-                                     chip-default "
-                                    >itsNeko博客食用方法                                  
-                                    <!-- 福袋按钮 -->
-                                    <div class="caishendeng">        
-                                        <div class="fenleiss">
-                                            <img class="caishenpic lions" src="/medias/spring-img/lion.png" />
-                                        </div>              
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="notebook-page dotted"></div>
-                        </div>
-                    </div>
-                </a>
+                                       
+                        <a href="images/4.jpg" data-caption="itsNeko博主的绘画作品">
+                            <img class="mat" src="/medias/loading.svg" data-src="images/4.jpg" alt="img"+3 >
+                        </a>                   
                 
+                                       
+                        <a href="images/5.jpg" data-caption="itsNeko博主的绘画作品">
+                            <img class="mat" src="/medias/loading.svg" data-src="images/5.jpg" alt="img"+4 >
+                        </a>                   
                 
-                <a href="/categories/%E9%9A%8F%E7%AC%94/" class="wenzhs" title="随笔 : 1">
-                    
-                    <div class="moleskine-wrapper">
-                        <div class="moleskine-notebook">
-                            <div class="chip notebook-cover center-align waves-effect waves-light
-                             chip-default "
-                                    style="background-color: #abc3b5;">                                               
-                                <div class="notebook-skin
-                                     chip-default "
-                                    >随笔                                  
-                                    <!-- 福袋按钮 -->
-                                    <div class="caishendeng">        
-                                        <div class="fenleiss">
-                                            <img class="caishenpic lions" src="/medias/spring-img/lion.png" />
-                                        </div>              
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="notebook-page dotted"></div>
-                        </div>
-                    </div>
-                </a>
+                                       
+                        <a href="images/6.jpg" data-caption="itsNeko博主的绘画作品">
+                            <img class="mat" src="/medias/loading.svg" data-src="images/6.jpg" alt="img"+5 >
+                        </a>                   
                 
+                                       
+                        <a href="images/7.jpg" data-caption="itsNeko博主的绘画作品">
+                            <img class="mat" src="/medias/loading.svg" data-src="images/7.jpg" alt="img"+6 >
+                        </a>                   
                 
+                                       
+                        <a href="images/8.jpg" data-caption="itsNeko博主的绘画作品">
+                            <img class="mat" src="/medias/loading.svg" data-src="images/8.jpg" alt="img"+7 >
+                        </a>                   
+                
+                                       
+                        <a href="images/9.jpg" data-caption="itsNeko博主的绘画作品">
+                            <img class="mat" src="/medias/loading.svg" data-src="images/9.jpg" alt="img"+8 >
+                        </a>                   
+                
+                                       
+                        <a href="images/10.jpg" data-caption="itsNeko博主的绘画作品">
+                            <img class="mat" src="/medias/loading.svg" data-src="images/10.jpg" alt="img"+9 >
+                        </a>                   
+                
+                                       
+                        <a href="images/11.jpg" data-caption="itsNeko博主的绘画作品">
+                            <img class="mat" src="/medias/loading.svg" data-src="images/11.jpg" alt="img"+10 >
+                        </a>                   
+                
+                                       
+                        <a href="images/12.jpg" data-caption="itsNeko博主的绘画作品">
+                            <img class="mat" src="/medias/loading.svg" data-src="images/12.jpg" alt="img"+11 >
+                        </a>                   
+                
+            
             </div>
         </div>
     </div>
-</div>
+</section>
 
+<script>
+    baguetteBox.run('.gallery', {
+        // 配置参数
+        buttons:Boolean,//是否显示导航按钮。
+        noScrollbars:true,//是否在显示时隐藏滚动条。
+        titleTag:true,//是否使用图片上的title属性作为图片标题
+        async:true,//是否异步加载文件。
+    });
 
-    
-    <style type="text/css">
-    #category-radar {
-        width: 100%;
-        height: 360px;
-    }
-</style>
+    start()
+        $(window).on('scroll', function(){
+         start();
+    })
 
-<div class="container">
-    <div class="card">
-        <div id="category-radar" class="card-content"></div>
-    </div>
-</div>
-
-<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
-<script type="text/javascript">
-    let radarChart = echarts.init(document.getElementById('category-radar'));
-
-    
-
-    let option = {
-        title: {
-            left: 'center',
-            text: '文章分类雷达图',
-            textStyle: {
-                fontWeight: 500,
-                fontSize: 22
+    function start(){
+          //.not('[data-isLoaded]')选中已加载的图片不需要重新加载
+        $('.gallery img').not('[data-isLoaded]').each(function(){
+            var $node = $(this)
+            if( isShow($node) ){
+                loadImg($node);
             }
-        },
-        tooltip: {},
-        radar: {
-            name: {
-                textStyle: {
-                    color: '#3C4858'
-                }
-            },
-            indicator: [{"name":"技术","max":2},{"name":"itsNeko博客食用方法","max":2},{"name":"随笔","max":2}],
-            nameGap: 5,
-            center: ['50%','55%'],
-            radius: '66%'
-        },
-        series: [{
-            type: 'radar',
-            color: ['#3ecf8e'],
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
-            data : [
-                {
-                    value : [1,1,1],
-                    name : '文章分类数量'
-                }
-            ]
-        }]
-    };
+        });
+     }
 
-    radarChart.setOption(option);
+    //判断一个元素是不是出现在窗口(视野)
+    function isShow($node){
+        return $node.offset().top <= $(window).height() + $(window).scrollTop();
+    }
+    //加载图片
+    function loadImg($img){
+    //.attr(值)
+    //.attr(属性名称,值)
+        $img.attr('src', $img.attr('data-src')); //把data-src的值 赋值给src
+        $img.attr('data-isLoaded', 1);//已加载的图片做标记
+    }
 </script>
-
-    
-</main>
 
 
     <style>
