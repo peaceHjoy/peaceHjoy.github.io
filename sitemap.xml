@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.baidu.com/posts/essay-demo.html</loc>
+    <loc>https://www.baidu.com/essay/index.html</loc>
     
     <lastmod>2026-04-07</lastmod>
     
@@ -65,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://www.baidu.com/qingdan/index.html</loc>
+    <loc>https://www.baidu.com/project/index.html</loc>
     
     <lastmod>2026-04-03</lastmod>
     
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://www.baidu.com/project/index.html</loc>
+    <loc>https://www.baidu.com/qingdan/index.html</loc>
     
     <lastmod>2026-04-03</lastmod>
     
@@ -93,15 +93,6 @@
   
   <url>
     <loc>https://www.baidu.com/tags/index.html</loc>
-    
-    <lastmod>2026-04-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.baidu.com/essay/index.html</loc>
     
     <lastmod>2026-04-03</lastmod>
     
@@ -267,13 +258,6 @@
   
   <url>
     <loc>https://www.baidu.com/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.baidu.com/categories/%E9%97%B2%E8%B0%88/</loc>
     <lastmod>2026-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
